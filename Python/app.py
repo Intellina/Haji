@@ -12,7 +12,7 @@ async def MainRoute():
   return {"result":"Grafana Metrics !"}
 
 @app.get("/GetUser/{user}")
-async def GetUserC(user : str):
+async def GetUser(user : str):
   """
   Get User
   """
