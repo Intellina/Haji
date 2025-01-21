@@ -7,7 +7,6 @@ global:
   retry_delay: 10s
 
 scrape_configs:
-
   # Scrape Prometheus Itself Every 15 Second
   - job_name: 'prometheus'
     # Override the Global Scrape Interval
@@ -15,7 +14,6 @@ scrape_configs:
     metrics_path: /prometheus/metrics
     static_configs:
       - targets: ['localhost:9090']
-
   # Scrape FastAPI Application Every 5 Second
   - job_name: 'fastapi-application'
     # Override the Global Scrape Interval
