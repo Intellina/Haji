@@ -1,0 +1,27 @@
+version : '3.9'
+
+services : 
+
+  # Python Application
+  application :
+    build : Python
+    ports :
+      - "8080:8080"
+    depends_on :
+      - prometheus
+    networks :
+      - monitoring
+
+  # Prometheus
+  prometheus : 
+    image : prom/prometheus:v3.1.0
+    ports : 
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml
+    networks:
+      - monitoring
+
+networks :
+  monitoring :
+    driver : bridge

@@ -1,0 +1,24 @@
+global:
+  # Default Scrape Interval on All Jobs
+  # Unavailable Scrape Interval on One Job
+  # That Particular Job Will Use Default Scrape Interval, 15 Second
+  scrape_interval: 15s
+  # Fail Scrape Config Will Re-Scrape on 10 Second
+  retry_delay: 10s
+
+scrape_configs:
+
+  # Scrape Prometheus Itself Every 15 Second
+  - job_name: 'prometheus'
+    # Override the Global Scrape Interval
+    scrape_interval: 15s
+    metrics_path: /prometheus/metrics
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Scrape FastAPI Application Every 5 Second
+  - job_name: 'fastapi-application'
+    # Override the Global Scrape Interval
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['application:8000']
