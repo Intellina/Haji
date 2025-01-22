@@ -1,5 +1,5 @@
-# Hall
-Hall : Belajar Grafana !
+# Haji
+Haji : Belajar Grafana !
 
-## 💻 Hall Technologies
+## 💻 Haji Technologies
 [![Our Tech](https://skillicons.dev/icons?i=python,grafana,prometheus,fastapi,docker)](https://skillicons.dev)
