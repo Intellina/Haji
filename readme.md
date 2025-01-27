@@ -1,5 +1,5 @@
-# Haji
-Haji : Belajar Grafana !
+# Yan
+Yan : Belajar Grafana !
 
-## 💻 Haji Technologies
+## 💻 Yan Technologies
 [![Our Tech](https://skillicons.dev/icons?i=python,grafana,prometheus,fastapi,docker)](https://skillicons.dev)
